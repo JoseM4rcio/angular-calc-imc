@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="card col-md-3 position-absolute top-50 start-50 translate-middle text-center text-dark p-3">
+      <div class="card-body">
+        <div class="row">
+          <div class="card-title">
+            <h5>Caculadora IMC</h5>
+          </div>
+          <label for="altura" class="mt-1 mb-1">Informe sua altura:</label>
+          <input [(ngModel)]="altura" type="number" class="form-control">
+          <label for="peso" class="mt-1 mb-1">Informe o seu peso:</label>
+          <input [(ngModel)]="peso" type="number" class="form-control">
+          <button (click)="calculo()" class="btn text-bg-success mt-3">Calcular</button>
+            <p *ngIf="imc" class="alert alert-success mt-2"> Seu IMC é igual à {{imc.toFixed(2)}} {{result}}</p>
+        </div>
+      </div>
+    </div>
+</div>
